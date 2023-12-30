@@ -13,9 +13,7 @@ window.addEventListener("load", () => {
 });
 
 // Textures
-const spaceTexture = new THREE.TextureLoader().load(
-  "/textures/stars_milky_way.jpeg"
-);
+const spaceTexture = new THREE.TextureLoader().load("/textures/stars_milky_way.jpeg");
 const sunTexture = new THREE.TextureLoader().load("/textures/sun.jpeg");
 const mercuryTexture = new THREE.TextureLoader().load("/textures/mercury.jpeg");
 const venusTexture = new THREE.TextureLoader().load("/textures/venus.jpeg");
@@ -23,9 +21,7 @@ const earthTexture = new THREE.TextureLoader().load("/textures/earth.png");
 const marsTexture = new THREE.TextureLoader().load("/textures/mars.jpeg");
 const jupiterTexture = new THREE.TextureLoader().load("/textures/jupiter.jpeg");
 const saturnTexture = new THREE.TextureLoader().load("/textures/saturn.jpeg");
-const saturnRingTexture = new THREE.TextureLoader().load(
-  "/textures/saturnRings1.png"
-);
+const saturnRingTexture = new THREE.TextureLoader().load("/textures/saturnRings1.png");
 const uranusTexture = new THREE.TextureLoader().load("/textures/uranus.jpeg");
 const neptuneTexture = new THREE.TextureLoader().load("/textures/neptune.jpeg");
 // Canvas
@@ -136,12 +132,7 @@ window.addEventListener("resize", () => {
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(
-  75,
-  sizes.width / sizes.height,
-  0.1,
-  100
-);
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
 camera.position.x = 0;
 camera.position.y = 0;
 camera.position.z = 2;
@@ -165,7 +156,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  */
 function addStar() {
   const starGeometry = new THREE.SphereGeometry(0.05, 24, 24);
-  const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const starMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(starGeometry, starMaterial);
   const [x, y, z] = Array(3)
     .fill()
