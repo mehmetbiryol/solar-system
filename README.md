@@ -1,4 +1,5 @@
 # solar-system
 Solar System with ThreeJS and GSAP
-to run npm install
+To run the project :
+npm install
 npm run dev
