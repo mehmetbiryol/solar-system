@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>ThreeJS Starter</title>
+</head>
+
+<body>
+  <div class="loading-screen">
+    <div class="portfolio-loader">
+      <div class="sun"></div>
+      <div class="orbit orbit1">
+        <div class="planetX planet1"></div>
+      </div>
+      <div class="orbit orbit2">
+        <div class="planetX planet2"></div>
+      </div>
+      <div class="orbit orbit3">
+        <div class="planetX planet3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="solar" id="sun">
+      <h1>SOLAR SYSTEM</h1>
+    </div>
+    <div class="card card-right" id="mercury">
+      <div class="title">
+        <h1>Mercury</h1>
+      </div>
+      <div class="planet-info">
+        <p>Mercury—the smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's
+          Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>88</h2>
+            <h3>EARTH DAYS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>0.4</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>R</h2>
+            <h3>oman God Of Speed</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>0</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-left" id="venus">
+      <div class="title">
+        <h1>Venus</h1>
+      </div>
+      <div class="planet-info">
+        <p>Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway
+          greenhouse effect, making it the hottest planet in our solar system.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>225</h2>
+            <h3>EARTH DAYS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>0.7</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>R</h2>
+            <h3>oman Goddess Of Love</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>0</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-right" id="earth">
+      <div class="title">
+        <h1>Earth</h1>
+      </div>
+      <div class="planet-info">
+        <p>Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the
+          only planet in our solar system with liquid water on the surface.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>365.25</h2>
+            <h3>EARTH DAYS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>1</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>T</h2>
+            <h3>he Ground</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>1</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-left" id="mars">
+      <div class="title">
+        <h1>Mars</h1>
+      </div>
+      <div class="planet-info">
+        <p>Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was—billions
+          of years ago—wetter and warmer, with a thicker atmosphere.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>1.88</h2>
+            <h3>EARTH YEARS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>1.5</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>R</h2>
+            <h3>oman God Of War</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>2</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-right" id="jupiter">
+      <div class="title">
+        <h1>Jupiter</h1>
+      </div>
+      <div class="planet-info">
+        <p>Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's
+          Great Red spot is a centuries-old storm bigger than Earth.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>11.86</h2>
+            <h3>EARTH YEARS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>5.2</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>K</h2>
+            <h3>ing Of The Roman Gods</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>79</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-left" id="saturn">
+      <div class="title">
+        <h1>Saturn</h1>
+      </div>
+      <div class="planet-info">
+        <p>Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant
+          planets have rings, but none are as spectacular as Saturn's.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>29.45</h2>
+            <h3>EARTH YEARS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>9.5</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>F</h2>
+            <h3>ather Of Jupiter</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>62</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-right" id="uranus">
+      <div class="title">
+        <h1>Uranus</h1>
+      </div>
+      <div class="planet-info">
+        <p>Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This
+          unique tilt makes Uranus appear to spin on its side.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>84</h2>
+            <h3>EARTH YEARS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>19.8</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>G</h2>
+            <h3>reek God Of The Sky</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>27</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-left" id="neptune">
+      <div class="title">
+        <h1>Neptune</h1>
+      </div>
+      <div class="planet-info">
+        <p>Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic
+          winds. It was the first planet located through mathematical calculations, rather than by telescope.</p>
+      </div>
+      <div class="first-row">
+        <div class="length-of-year">
+          <div class="loy-top">
+            <h2>164.81</h2>
+            <h3>EARTH YEARS</h3>
+          </div>
+          <hr>
+          <div class="loy-bottom">
+            <h4>Length Of Year</h4>
+          </div>
+        </div>
+        <div class="distance-from-sun">
+          <div class="dfs-top">
+            <h2>30.1</h2>
+            <h3>AU</h3>
+          </div>
+          <hr>
+          <div class="dfs-bottom">
+            <h4>Distance From Sun</h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-row">
+        <div class="namesake">
+          <div class="namesake-top">
+            <h2>R</h2>
+            <h3>oman God Of The Sea</h3>
+          </div>
+          <hr>
+          <div class="namesake-bottom">
+            <h4>Namesake</h4>
+          </div>
+        </div>
+        <div class="moons">
+          <div class="moons-top">
+            <h2>14</h2>
+          </div>
+          <hr>
+          <div class="moons-bottom">
+            <h4>Moons</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="previous">Previous</button>
+  <button class="next">Next</button>
+  <canvas class="webgl"></canvas>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

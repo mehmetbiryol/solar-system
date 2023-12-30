@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Courier Prime", monospace;
+  color: white;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+}
+.solar {
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: grid;
+  place-items: center;
+  top: 350px;
+  transform: scale(0);
+  transition: 0.7s;
+}
+.solar > h1 {
+  font-size: 64px;
+  text-shadow: 3px 2px 4px rgba(0, 0, 0, 1);
+}
+.card {
+  width: 35%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 4;
+  top: 100px;
+  transform: scale(0);
+  transition: 0.7s;
+}
+.card-right {
+  right: 100px;
+}
+.card-left {
+  left: 100px;
+}
+.title {
+  width: 100%;
+  padding: 10px 0;
+}
+h1 {
+  font-size: 48px;
+}
+.planet-info {
+  width: 100%;
+  padding: 10px 0;
+}
+p {
+  font-size: 16px;
+}
+.first-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.length-of-year {
+  width: 65%;
+  padding: 10px 0;
+}
+.loy-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.loy-bottom {
+  padding: 10px 0;
+}
+h2 {
+  font-size: 36px;
+  color: blueviolet;
+}
+h3 {
+  font-size: 19px;
+}
+h4 {
+  font-size: 12px;
+}
+.distance-from-sun {
+  width: 35%;
+}
+.dfs-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dfs-bottom {
+  padding: 10px 0;
+}
+.second-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.namesake {
+  width: 65%;
+  padding: 10px 0;
+}
+.namesake-top {
+  display: flex;
+  align-items: center;
+}
+.namesake-bottom {
+  padding: 10px 0;
+}
+.moons {
+  width: 35%;
+}
+.moons-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.moons-bottom {
+  padding: 10px 0;
+}
+.open {
+  transform: scale(1) !important;
+}
+
+button {
+  width: 140px;
+  padding: 12px 24px;
+  position: fixed;
+  z-index: 3;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px black;
+  background-color: rgb(6, 6, 60);
+  color: white;
+}
+.previous {
+  top: 90%;
+  left: 40%;
+}
+.next {
+  top: 90%;
+  left: 50%;
+}
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+.loading-screen {
+  display: block;
+}
+.portfolio-loader {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.sun {
+  background: radial-gradient(#ff0, #f90);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.planetX {
+  position: absolute;
+  z-index: 100;
+  border-radius: 50%;
+}
+.planet1 {
+  left: 20px;
+  height: 13px;
+  width: 13px;
+  background-color: #ff8;
+}
+.planet2 {
+  left: 23px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(#00ff00, #09f, #09f);
+  -webkit-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+}
+.planet3 {
+  left: 49px;
+  height: 17px;
+  width: 17px;
+  background: radial-gradient(#ff9900, #ff4400);
+}
+.orbit {
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.orbit1 {
+  height: 100px;
+  width: 100px;
+  -webkit-animation: rotation 2s infinite linear;
+  -moz-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+}
+.orbit2 {
+  height: 150px;
+  width: 150px;
+  -webkit-animation: rotation 3s infinite linear;
+  -moz-animation: rotation 3s infinite linear;
+  animation: rotation 3s infinite linear;
+}
+.orbit3 {
+  height: 200px;
+  width: 200px;
+  -moz-animation: rotation 6s infinite linear;
+  -webkit-animation: rotation 6s infinite linear;
+  animation: rotation 6s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
